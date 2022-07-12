@@ -13,9 +13,6 @@ h2::before, h2::after{
     vertical-align: middle;
     width: 47%;
 }
-img:hover{
-    animation: rotation 2s infinite linear;
-}
 @media (prefers-color-scheme: dark) {
     html{
         background-color: #474559;
