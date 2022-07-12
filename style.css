@@ -1,0 +1,200 @@
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+h2::before, h2::after{
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 47%;
+}
+img:hover{
+    animation: rotation 2s infinite linear;
+}
+@media (prefers-color-scheme: dark) {
+    html{
+        background-color: #474559;
+    }
+    h2::before, h2::after{
+        background-color: #fff;
+    }
+    .project, h1, h2{
+        color: white;
+    }
+    a{
+        color: rgb(255, 138, 138);
+    }
+    .heading-text-name{
+        background-image: linear-gradient(
+            45deg,
+            hsl(240deg 96% 72%) 0%,
+            hsl(299deg 55% 65%) 8%,
+            hsl(336deg 91% 76%) 17%,
+            hsl(0deg 100% 85%) 25%,
+            hsl(35deg 84% 75%) 33%,
+            hsl(102deg 63% 76%) 42%,
+            hsl(177deg 100% 55%) 50%,
+            hsl(171deg 100% 50%) 58%,
+            hsl(159deg 100% 58%) 67%,
+            hsl(135deg 100% 69%) 75%,
+            hsl(186deg 100% 50%) 83%,
+            hsl(199deg 100% 50%) 92%,
+            hsl(287deg 100% 50%) 100%
+        );
+    }
+    .language{
+        color: white;
+    }
+}
+@media (prefers-color-scheme: light){
+    h2::before, h2::after{
+        background-color: #000;
+    }
+    .project h1{
+        color: #000;
+    }
+    a{
+        color: red;
+    }
+    .heading-text-name{
+        background: linear-gradient(
+            45deg,
+            hsl(299deg 100% 52%) 0%,
+            hsl(290deg 100% 53%) 4%,
+            hsl(280deg 100% 53%) 9%,
+            hsl(271deg 100% 53%) 13%,
+            hsl(262deg 100% 53%) 17%,
+            hsl(253deg 100% 53%) 22%,
+            hsl(243deg 100% 53%) 26%,
+            hsl(234deg 100% 53%) 30%,
+            hsl(230deg 100% 53%) 35%,
+            hsl(236deg 100% 52%) 39%,
+            hsl(242deg 100% 51%) 43%,
+            hsl(248deg 100% 50%) 48%,
+            hsl(253deg 100% 49%) 52%,
+            hsl(259deg 100% 48%) 57%,
+            hsl(265deg 100% 47%) 61%,
+            hsl(271deg 100% 46%) 65%,
+            hsl(275deg 100% 49%) 70%,
+            hsl(279deg 100% 53%) 74%,
+            hsl(283deg 100% 57%) 78%,
+            hsl(287deg 100% 62%) 83%,
+            hsl(291deg 100% 66%) 87%,
+            hsl(294deg 100% 71%) 91%,
+            hsl(299deg 100% 75%) 96%,
+            hsl(302deg 100% 79%) 100%
+          );
+    }
+}
+h1{
+    font-size: 3rem;
+    text-align: center;
+    font-family: Roboto;
+}
+.project h1{
+    font-size: 1.5rem;
+}
+h2:before {
+    right: 0.47em;
+} 
+h2:after {
+    left: 0.47em;
+    margin-right: -49%;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 2fr));
+    padding: 10px;
+    align-items: center;
+    padding-left: 50px;
+}
+.project{
+    text-align: center;
+    font-family: Roboto;
+    width: 90%;
+    height: 100%;
+    line-break: loose;
+    padding: 20px;
+    padding-right: 35px;
+}
+.heading-container{
+    padding-bottom: 40%;
+}
+.view-projects{
+    position: absolute;
+    bottom: 2%;
+    margin-left: -2%;
+}
+.heading-text-name{
+    color: rgba(255,34,34);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.4s;
+}
+.heading-text-name:hover{
+    opacity: 1;
+    transition: 0.4s;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+.project-button{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    bottom: 0;
+    cursor: pointer;
+    padding: 14px 18px 14px 18px;
+    margin-top: 0 auto;
+    transition: 0.3s;
+    border-radius: 3000px;
+    background-color: #b3fff2;
+}
+.project-button:hover{
+    transition: 0.5s;
+}
+.github-logo img{
+    width: 16px;
+    height: 16px;
+    vertical-align:text-top;
+}
+a{
+    text-decoration: none;
+}
+canvas{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+}
+.waving-emoji-gif{
+    width: 3rem;
+    height: 3rem;
+}
+.languages{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 2fr));
+    padding: 10px;
+    row-gap: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-right: 8%;
+}
+.language{
+    width: 30vw;
+    height: 120%;
+    /* padding: 8px 5px 8px 5px; */
+}
